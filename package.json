@@ -1,9 +1,8 @@
 {
   "name": "mutar",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {    
+  "scripts": {
     "build-css": "node-sass --include-path scss scss/style.scss css/estilo.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
@@ -12,5 +11,15 @@
   "devDependencies": {
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scarretto54/MutarDigitalConsultora.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scarretto54/MutarDigitalConsultora/issues"
+  },
+  "homepage": "https://github.com/scarretto54/MutarDigitalConsultora#readme",
+  "description": ""
 }

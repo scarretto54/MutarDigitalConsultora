@@ -15,25 +15,22 @@
 <body>
   <div Class="page">
     <!-- Header-->
-    <header Class="page__header">
-          <div id="headerUno">
-              <a href="index.html"><img height="50" src="./img/mutarLogoUno.png" alt="mutar"/></a>
-          </div>
-          <nav class="animate__animated   animate__backInRight navbar navbar-expand-lg navbar-dark" id="headerDos">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul id="bgNavMenu" class=" navbar-nav me-auto mb-2 mb-lg-0">   
-                      <li><a href="./html/queHacemos.html">¿Que hacemos?</a></li>
-                      <li><a href="./html/servicios.html">Servicios y soluciones</a></li>
-                      <li><a href="./html/nuestroEquipo.html">Nuestro equipo</a></li>
-                      <li id="recuadroContacto"><a href="./html/contactoForm.html">Contactanos</a></li>
-              </ul>
+    <header Class="page__header">      
+      <nav class="navbar navbar-dark navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img height="50" src="./img/mutarLogoUno.png" alt="mutar"/></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="animate__animated   animate__backInRight collapse navbar-collapse" id="navbarResponsive">
+                <ul id="bgNavMenu" class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a   href="./html/queHacemos.html">¿Que hacemos?</a></li>
+                    <li class="nav-item"><a   href="./html/servicios.html">Servicios y soluciones</a></li>
+                    <li class="nav-item"><a   href="./html/nuestroEquipo.html">Nuestro equipo</a></li>
+                    <li class="nav-item"><a id="recuadroContacto" href="./html/contactoForm.html">Contactanos</a></li>
+                </ul>
             </div>
-          </nav>
-    </header> 
+        </div>
+      </nav>
+    </header>
     <!-- Home-->
     <main Class="page__main">
           <div class="homeVideo">
@@ -97,7 +94,15 @@
       </div>
     </footer>
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-</body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+  </body>
 </html>
