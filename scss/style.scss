@@ -26,7 +26,7 @@
     .page{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 12vh 76vh 12vh;
+        grid-template-rows: 12vh 76vh 20vh;
         grid-template-areas: 
                     "header"
                     "main"
@@ -59,32 +59,28 @@
                      &__main{
                         background-color: $backgroundMain;
                         grid-area:main;
+
                      }      
     }  
 }
-
 /* pageDos */
-    @media (max-width: 719px) and (max-height: 575px) {
+    @media (max-width: 1199px) and (max-height: 619px) {
         .pageDos{
             display: grid;
             grid-template-columns: 1fr; 
-            grid-template-rows: 20vh 100% 20vh;        
+            grid-template-rows: 12vh 100% 20vh;        
             grid-template-areas: 
                         "header"
                         "main"
                         "footer";
-                        &__header{
-                            grid-area: header;
-                            align-self: center;
-                            justify-self: center;
-                         }
+   
                          &__main{
                             background-color: $backgroundMain;
                             grid-area:main;
                          }
         }
     }
-    @media (min-width: 720px) and (min-height: 576px) {
+    @media (min-width: 1200px) and (min-height: 620px) {
         .pageDos{
             display: grid;
             grid-template-columns: 1fr;
@@ -93,14 +89,10 @@
                         "header"
                         "main"
                         "footer";
-                        &__header{
-                            grid-area: header;
-                            align-self: center;
-                            justify-self: center;
-                         }
+    
                          &__main{
                             background-color: $backgroundMain;
-                            grid-area:main;
+                            grid-area: main;
                          }
         }
     }
@@ -110,16 +102,11 @@
     .pageTres{
                 display: grid;
                 grid-template-columns: 1fr; 
-                grid-template-rows: 20vh 100% 20vh;        
+                grid-template-rows: 12vh 100% 20vh;        
                 grid-template-areas: 
                             "header"
                             "main"
                             "footer";
-                            &__header{
-                                grid-area: header;
-                                align-self: center;
-                                justify-self: center;
-                             }
                     &__main{
                         background-color: $backgroundMain;
                         grid-area:main;
@@ -136,11 +123,6 @@
                       "header"
                       "main"
                       "footer";
-                      &__header{
-                        grid-area: header;
-                        align-self: center;
-                        justify-self: center;
-                     }
                         &__main{
                             background-color: $backgroundMain;
                             grid-area:main;
@@ -150,27 +132,22 @@
 
 /* pageCuatro */
 
-@media (max-width: 719px) and (max-height: 575px) {
+@media (max-width: 991px) and (max-height: 575px) {
     .pageCuatro{
         display: grid;
         grid-template-columns: 1fr; 
-        grid-template-rows: 20vh 100% 20vh;        
+        grid-template-rows: 12vh 100% 20vh;        
         grid-template-areas: 
                     "header"
                     "main"
                     "footer";
-                    &__header{
-                        grid-area: header;
-                        align-self: center;
-                        justify-self: center;
-                     }
                      &__main{
                         background-color: $backgroundMain;
                         grid-area:main;
                      }
     }
 }
-@media (min-width: 720px) and (min-height: 576px) {
+@media (min-width: 992px) and (min-height: 576px) {
     .pageCuatro{
         display: grid;
         grid-template-columns: 1fr;
@@ -179,11 +156,6 @@
                     "header"
                     "main"
                     "footer";
-                    &__header{
-                        grid-area: header;
-                        align-self: center;
-                        justify-self: center;
-                     }
                      &__main{
                         background-color: $backgroundMain;
                         grid-area:main;
@@ -197,16 +169,11 @@
     .pageCinco{
         display: grid;
         grid-template-columns: 1fr; 
-        grid-template-rows: 20vh 100% 20vh;        
+        grid-template-rows: 12vh 100% 20vh;        
         grid-template-areas: 
                     "header"
                     "main"
                     "footer";
-                    &__header{
-                        grid-area: header;
-                        align-self: center;
-                        justify-self: center;
-                     }
                      &__main{
                         background-color: $backgroundMain;
                         grid-area:main;
@@ -222,11 +189,6 @@
                     "header"
                     "main"
                     "footer";
-                    &__header{
-                        grid-area: header;
-                        align-self: center;
-                        justify-self: center;
-                     }
                      &__main{
                         background-color: $backgroundMain;
                         grid-area:main;
@@ -236,7 +198,7 @@
 
 /* main */
 
-    @media (min-width: 720px) {
+    @media (min-width: 950px) {
         .mainCuatro{
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -269,6 +231,12 @@
     }
 
 /* header */
+.header{
+    grid-area: "header";
+    align-self: center;
+    justify-self: center;
+    height: 12vh;    
+ }   
     #recuadroContacto{
         border: solid azure;
         background-color: $backgroundHeaderContacto;
@@ -329,6 +297,7 @@
   #mainNav .navbar-nav .nav-item .nav-link.active {
     color: $fontNavHoverColor !important;
   }
+  
   @media (min-width: 992px) {
     #mainNav {
       box-shadow: none;
