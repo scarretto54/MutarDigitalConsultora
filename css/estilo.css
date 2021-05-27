@@ -328,6 +328,14 @@ input:focus {
   .homeVideo__video {
     max-width: 100%; }
 
+@media (min-width: 550px) {
+  #videoDos {
+    display: none; } }
+
+@media (max-width: 549px) {
+  #videoUno {
+    display: none; } }
+
 /* queHacemos */
 #queHacemosCajaTexto {
   margin: 0% 5% 1.4% 5%;

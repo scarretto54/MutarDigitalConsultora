@@ -432,6 +432,18 @@
             max-width: 100%;
           }
     }
+    @media (min-width: 550px) {
+
+        #videoDos{
+            display:none;          
+        }
+    }
+        @media (max-width: 549px) {
+            #videoUno{
+                display:none;  
+            }
+
+        }
 
 /* queHacemos */
     #queHacemosCajaTexto{
@@ -480,5 +492,3 @@
         }
 
     }
-
-
