@@ -10,29 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Mutar Digital - Home</title>
+    <title>Mutar Digital - Servicios y Soluciones</title>
  </head>
 <body>
-  <div Class="page">
+  <div id=appPage class="page">
     <!-- Header-->
-    <header Class="page__header">      
+    <header id="header" class="header">      
       <nav class="navbar navbar-dark navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img height="50" src="./img/mutarLogoUno.png" alt="mutar"/></a>
+            <a class="navbar-brand js-scroll-trigger" href="#/home"><img height="50" src="./img/mutarLogoUno.png" alt="mutar"/></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="animate__animated   animate__backInRight collapse navbar-collapse" id="navbarResponsive">
                 <ul id="bgNavMenu" class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a   href="./html/queHacemos.html">¿Que hacemos?</a></li>
-                    <li class="nav-item"><a   href="./html/servicios.html">Servicios y soluciones</a></li>
-                    <li class="nav-item"><a   href="./html/nuestroEquipo.html">Nuestro equipo</a></li>
-                    <li class="nav-item"><a id="recuadroContacto" href="./html/contactoForm.html">Contactanos</a></li>
+                  <li class="nav-item"><a   href="#/quehacemos">¿Que hacemos?</a></li>
+                  <li class="nav-item"><a   href="#/servicios">Servicios y soluciones</a></li>
+                  <li class="nav-item"><a   href="#/nuestroequipo">Nuestro equipo</a></li>
+                  <li class="nav-item"><a id="recuadroContacto" href="#/contactoform">Contactanos</a></li>
                 </ul>
-            </div>
+            </div>            
         </div>
       </nav>
     </header>
-    <!-- Home-->
-    <main Class="page__main">
+     <main id="app" Class="page__main">
           <div id="videoUno" class="homeVideo">
             <video class="homeVideo__video" height="400px" src="./img/videoInstitucional.mp4" autoplay muted loop ></video>
           </div>
@@ -40,42 +39,110 @@
             <video class="homeVideo__video"  height="380px" src="./img/institucionalMutarMobile.mp4" autoplay muted loop ></video>
           </div>
     </main>
+                                       <!--Modal --> 
+                                      <form action="" onsubmit="enviarPresupuesto()"  id="ventaForm" class="modal-bs needs-validation" >
+                                        <div class="modal fade" id="serviciosModal" tabindex="-1" aria-labelledby="serviciosModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h4 class="modal-title" id="serviciosModalLabel"><strong>Servicios Mutar</strong></h4>                                        
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>            
+                                              </div>
+                                              <div class="modal-body">                                        
+                                                  <div id="checkPrice" style="display:block">                                              
+                                                      <br>
+                                                      <label for="valorServicio" class="form-label form_fieldset__format" id="serviciosModalLabel">Servicio </label>                                             
+                                                      <select class="form_fieldset__format" id="valorServicio" required>
+                                                        <option selected disabled value=""><strong>Elije una opción...</strong></option>
+                                                        <option value="1">Gestión de redes sociales</option>
+                                                        <option value="2">Publicidad digital</option>
+                                                        <option value="3">Diseño gráfico y Branding</option>
+                                                        <option value="4">Consultorías y capacitaciones</option>
+                                                      </select>                                          
+                                                      <br>
+                                                      <br>
+                                                      <label for="dto" class="form_fieldset__format" id="serviciosModalLabel">Codigo Descuento</label>
+                                                      <input class="form-text" type="text" id="dto">
+                                                      <button  type="button" class="btn btn-outline-primary pink-900" id="dtoCargar"><strong>Cargar</strong></button>
+                                                      <div id="dtoConfirm"></div>
+                                                      <br>
+                                                      <br>
+                                                      <label for="modalEmail" class="form_fieldset__format" id="serviciosModalLabel">E-Mail Contacto</label>
+                                                      <input class="form-text" type="email" id="modalEmail" required>
+                                                      <br>
+                                                      <br>
+                                                      <p class="form_fieldset__format"><strong> Total: </strong> &dollar;  <span id="total"></span></p>
+                                                      <br>
+                                                      <div class="modal-footer"></div>
+                                                      <button class="btn btn-primary" type="button" id="quieroMutar"><strong>Quiero Mutar!</strong></button>
+                                                  </div> 
+                                                  <div id="checkPago" style="display:none">
+                                                    <h5 class="modal-subtitle" id="serviciosModalLabel"><strong>Pago</strong></h5>                                                                                                        
+                                                    <br>
+                                                      <label for="tipoTarjeta" class="form-label form_fieldset__format" id="serviciosModalLabel">Tipo </label>                                             
+                                                      <select selected enabled class="form_fieldset__format" id="tipoTarjeta" required>
+                                                        <option selected disabled value=""><strong>Elije una opción...</strong></option>
+                                                        <option value="1">Debito</option>
+                                                        <option value="2">Credito</option>  
+                                                      </select>         
+                                                      <label for="bancoTarjeta" class="form-label form_fieldset__format" id="serviciosModalLabel">Banco  </label>                                             
+                                                      <select  class="form_fieldset__format" id="bancoTarjeta" required>
+                                                        <option selected disabled value=""><strong>Elije una opción...</strong></option>
+                                                        <option value="1">Banco Nacion</option>
+                                                        <option value="2">Banco Provincia</option>
+                                                        <option value="3">Banco de Cordoba</option>
+                                                        <option value="4">Banco Galicia</option>
+                                                        <option value="5">Santander Rio</option>
+                                                        <option value="6">ICBC</option>
+                                                      </select>
+                                                      <br>
+                                                      <br>
+                                                      <label for="marcaTarjeta" class="form-label form_fieldset__format" id="serviciosModalLabel">Tarjeta </label>                                             
+                                                      <select selected disabled class="form_fieldset__format"  id="marcaTarjeta" required>
+                                                        <option selected disabled value=""><strong>Elije una opción...</strong></option>
+                                                        <option value="1">Visa</option>
+                                                        <option value="2">Mastercard</option>
+                                                      </select>
+
+
+                                                     <label for="cuotasTarjeta" class="form-label form_fieldset__format" id="serviciosModalLabel">Cuotas</label>                                             
+                                                      <select selected disabled class="form_fieldset__format" id="cuotasTarjeta" required>
+                                                        <option selected disabled value=""><strong>Elije una opción...</strong></option>                                                                                                 
+                                                      </select>                                      
+                                                      <br>
+                                                      <br>
+                                                      <label for="titularTarjeta" class="form_fieldset__format" id="serviciosModalLabel">Nombre Titular</label>
+                                                      <input class="col-8" type="text" id="titularTarjeta" width=50 placeholder="JUAN PEREZ" required>
+                                                      <br>
+                                                      <br>  
+                                                      <label for="nroTarjeta" class="form_fieldset__format" id="serviciosModalLabel">Numero Tarjeta</label>
+                                                      <input class="col-6" type="number" id="nroTarjeta" placeholder="0000000000000000" required>
+                                                      <br>
+                                                      <br>                                                                                       
+                                                      <label for="codTarjeta" class="form_fieldset__format" id="serviciosModalLabel">Cod. de Seg.</label>
+                                                      <input class="col-2" type="number" id="codTarjeta"  placeholder="000" required>                                                                                             
+                                                      <label for="vtoTarjeta" class="form_fieldset__format" id="serviciosModalLabel">Fecha Vto.</label>
+                                                      <input class="col-2" type="number" id="vtoTarjeta" placeholder="0000" required>
+                                                      <br>
+                                                      <br>
+                                                      <p class="form_fieldset__format"><strong> Importe: </strong> &dollar;<span id="importe"></span></p>
+                                                      <br>  
+                                                      <div class="modal-footer">                                                                                                                                                                                            
+                                                      <button type="button" class="btn btn-secondary" id="volver"><strong>volver</strong></button>                                                                                                             
+                                                      <button type="submit" id="saveForm" class="btn btn-primary"><strong>Pagar</strong></button>
+                                                  </div>                                              
+                                              </div>                                                                    
+                                              </div>
+                                            </div>
+                                          
+                                        </div>
+                                      </div>
+                                      </form>
     <!-- Footer-->
     <footer class="footer">
       <div class="footer__footerUno">
-        <strong>Mi Mutar</strong>
       </div>
-      <div class="footer__footerDos">
-      <div class="container-fluid">
-              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Ingresar</button>
-            </div>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-        <div class="modal-body">
-              <form class="row g-3">
-                <div class="col-auto">
-                  <label for="exampleFormControlInput1" class="visually-hidden">E-mail</label>
-                  <input type="email" class="form-control form-control-sm" id="inputEmail2" placeholder="E-mail">
-                </div>
-                <div class="col-auto">
-                  <label for="inputPassword2" class="visually-hidden">Contraseña</label>
-                  <input  type="password" class="form-control form-control-sm" id="inputPassword2"  placeholder="Contraseña">
-                </div>
-              </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-dark">Ingresar</button>
-        </div>
-      </div>
-        </div>
-      </div>
-      <!-- /Modal -->
+      <div class="footer__footerDos">    
       </div>
       <div class="footer__footerTres">
         <strong>Seguí MUTAR</strong>
@@ -95,17 +162,21 @@
               <img height="24" src="./img/logoLinkedin.svg" alt="linkedin"/>
             </div>
       </div>
-    </footer>
-  </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-  </body>
+    </footer> 
+  </div> 
+    <!--Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Core JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/router.js"></script>
+    <script src="./js/pages.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/producto.js"></script>
+    <!--Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+</body>
 </html>
